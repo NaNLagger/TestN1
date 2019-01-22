@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestN1</string>
+
+    <string name="price">%1$s ₽</string>
+    <string name="address">%1$s, %2$s</string>
+    <string name="totalArea">Общая %1$d м²</string>
+    <string name="livingArea">Жилая %1$d м²</string>
+    <string name="kitchenArea">кухня %1$d м²</string>
+    <string name="floor">Этаж %1$d из %2$d</string>
+    <string name="photoCounter">%1$d / %2$d</string>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:background="@color/contentBackground"
+            android:foreground="?attr/selectableItemBackground"
+            >
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pagerPhoto"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/contentBackgroundDark"/>
+
+        <TextView
+                android:id="@+id/textImageCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_count_background"
+                android:textColor="@color/white"
+                android:padding="4dp"
+                tools:text="5 / 10"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/pagerPhoto"/>
+
+        <ImageView
+                android:id="@+id/imageStubView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/contentBackgroundDark"
+                android:src="@mipmap/placeholder_image"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
+        <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2 350 000 P"
+                app:layout_constraintTop_toBottomOf="@+id/pagerPhoto"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                />
+
+        <TextView
+                android:id="@+id/textStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="ул. Ленина, 264"
+                app:layout_constraintTop_toBottomOf="@+id/textPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:id="@+id/textTotalArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Общая 30"
+                app:layout_constraintTop_toBottomOf="@+id/textStreet"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:id="@+id/textLivingArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Жилая 30"
+                app:layout_constraintTop_toBottomOf="@+id/textStreet"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textTotalArea"/>
+
+        <TextView
+                android:id="@+id/textKitchenArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Кухня 30"
+                app:layout_constraintTop_toBottomOf="@+id/textStreet"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textLivingArea"/>
+
+        <TextView
+                android:id="@+id/textFloor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Этаж 5 из 9"
+                app:layout_constraintTop_toBottomOf="@+id/textTotalArea"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
